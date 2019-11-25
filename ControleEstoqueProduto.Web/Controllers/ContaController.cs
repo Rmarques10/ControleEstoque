@@ -43,5 +43,13 @@ namespace ControleEstoqueProduto.Web.Controllers
             }
             return View(login);
         }
+        [HttpPost]
+        [AllowAnonymous]
+        public ActionResult logOff()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Index", "Home");
+
+        }
     }
 }
