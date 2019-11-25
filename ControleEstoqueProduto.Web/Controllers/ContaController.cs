@@ -42,7 +42,8 @@ namespace ControleEstoqueProduto.Web.Controllers
                 ModelState.AddModelError("", "Login inválido");
             }
             return View(login);
-        }
+        }  
+
         [HttpPost]
         [AllowAnonymous]
         public ActionResult logOff()
