@@ -11,13 +11,14 @@ namespace ControleEstoqueProduto.Web.Controllers
     public class ContaController : Controller
     {
         [AllowAnonymous]
-        public ActionResult Login(string retrunurl)
+        public ActionResult Login(string returnUrl)
         {
-            ViewBag.RetrunUrl = retrunurl;
+            ViewBag.ReturnUrl = returnUrl;
             return View();
         }
         [HttpPost]
-         public ActionResult Login(LoginViewModel login, string returnUrl)
+        [AllowAnonymous]
+        public ActionResult Login(LoginViewModel login, string returnUrl)
         {
             if (!ModelState.IsValid)
             {
