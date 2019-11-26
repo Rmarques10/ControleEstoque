@@ -12,13 +12,13 @@ namespace ControleEstoqueProduto.Web.Models
         {
             var ret = false;
             using (var conexao = new SqlConnection())
-            {
-                conexao.ConnectionString = "Data Soucer=localhost;Initial Catalog=controle-estoque;User Id=admin;Password=123";
+            {                         
+                conexao.ConnectionString = "Data Source=DESKTOP-3JQ3N4B;Initial Catalog=controle-estoque;Persist Security Info=True;User ID=admin;Password=123";
                 conexao.Open();
                 using (var comando = new SqlCommand())
                 {
                     comando.Connection = conexao;
-                    comando.CommandText = string.Format("select count(*) from usuario where login='{0}' and senha+ '{1}'", login, senha);
+                    comando.CommandText = string.Format("select count(*) from usuario where login='{0}' and senha= '{1}'", login, senha);
                     ret = ((int)comando.ExecuteScalar() > 0);
                 }
             }
