@@ -22,7 +22,7 @@ select,
 textarea {
     max-width: 280px;
 }
-].container-login{
+.container-login{
     width: 400px;
     margin: 0 auto;
 }
@@ -32,4 +32,7 @@ textarea {
     text-transform: uppercase;
 }
 
-.inv
+.invisivel {
+    display: none;
+
+}
